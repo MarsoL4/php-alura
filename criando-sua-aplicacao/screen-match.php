@@ -7,13 +7,21 @@ $nomeFilme = "Top Gun - Maverick";
 // $anoLancamento = $argv[1] ?? 2022; // $argv contém os argumentos passados via terminal ao script; $argv[1] é o primeiro valor informado após o nome do arquivo
 $anoLancamento = 2022;
 
-$quantidadeDeNotas = $argc - 1;
+$quantidadeDeNotas = $argc - 1; // Para uso de For no cálculo de Soma de Notas
+// $quantidadeDeNotas = $argc - 2; // Para uso de While no cálculo de Soma de Notas
 
 $somaDeNotas = 0;
 
-for ($contador = 1; $contador < $argc; $contador ++) { // O laço For só irá parar quando o contador for maior que a quantidade de parametros recebidos no terminal ao executar o codigo
+// Soma de Notas com For
+for ($contador = 1; $contador < $argc; $contador++) { // O laço For só irá parar quando o contador for maior que a quantidade de parametros recebidos no terminal ao executar o codigo
     $somaDeNotas += $argv[$contador]; // Recebe um parametro passado apos o nome do arquivo a ser rodado por vez queo laço for rodar e soma no total de soma de notas
 }
+
+// Exemplo de soma de Notas com While
+// $contador = 1;
+// while ($argv[$contador] != 0) {
+//     $somaDeNotas += $argv[$contador++];
+// }
 
 // Outros Exemplos:
 // $somaDeNotas -= 2; 
