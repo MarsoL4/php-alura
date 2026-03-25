@@ -48,3 +48,10 @@ echo $num; // Exibe 6
 echo $resultado; // Exibe 5
 
 // O mesmo para os operadores de decremento, que diminuem o valor de uma variável em 1: pré-decremento (--$variavel) e pós-decremento ($variavel--).
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------//
+
+// Operadores Ternários
+
+$resultado = $expressao1 ? $expressao2 : $expressao3;
+// Se $expressao1 for verdadeira (true), $resultado terá o valor de $expressão2. Caso contrário, $resultado terá o valor de $expressão3.
