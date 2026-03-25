@@ -3,6 +3,7 @@
 echo "Bem-vindo ao Screen Match!\n";
 
 $nomeFilme = "Top Gun - Maverick";
+
 $anoLancamento = $argv[1] ?? 2022; // $argv contém os argumentos passados via terminal ao script; $argv[1] é o primeiro valor informado após o nome do arquivo
 
 $somaDeNotas = 9 + 6 + 7 + 5;
@@ -26,11 +27,20 @@ $incluidoNoPlano = $planoPrime || $anoLancamento < 2010;
 echo "Nome do Filme: $nomeFilme \nNota do Filme: $notaFilme \nAno de Lançamento: $anoLancamento \n";
 
 if ($anoLancamento > 2022) {
-    echo "Esse filme é um lançamento";
+    echo "Esse filme é um lançamento\n";
 
 } elseif($anoLancamento > 2020 && $anoLancamento <= 2022) {
-    echo "Esse filme ainda é novo";
+    echo "Esse filme ainda é novo\n";
 
 }else {
-    echo "Esse filme não é um lançamento";
+    echo "Esse filme não é um lançamento\n";
 }
+
+$genero = match ($nomeFilme) {
+    "Top Gun - Maverick" => "ação",
+    "Thor Ragnarok" => "super-herói",
+    "Se beber não case" => "comédia",
+    default => "gênero desconhecido"
+};
+
+echo "O gênero do filme é: $genero";
