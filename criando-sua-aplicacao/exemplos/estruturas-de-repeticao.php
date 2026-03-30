@@ -23,3 +23,10 @@ while ($argv[$contador] != 0) { // Enquanto tiver parametros passados (diferente
 do {
     //alguma ação
 } while (true /*condicao*/);
+
+// ** Laço Foreach **:
+// Exemplo:
+$somaDeNotas = 0;
+foreach ($notas as $nota) { // Para cada item do array $notas, cria uma variavel notas e salva o valor dele nela e soma no valor de $somaDeNotas
+    $somaDeNotas += $nota;
+}
