@@ -10,11 +10,11 @@ $anoLancamento = 2022;
 $quantidadeDeNotas = $argc - 1; // Para uso de For no cálculo de Soma de Notas
 // $quantidadeDeNotas = $argc - 2; // Para uso de While no cálculo de Soma de Notas
 
-$somaDeNotas = 0;
+$notas = [];
 
 // Soma de Notas com For
 for ($contador = 1; $contador < $argc; $contador++) { // O laço For só irá parar quando o contador for maior que a quantidade de parametros recebidos no terminal ao executar o codigo
-    $somaDeNotas += $argv[$contador]; // Recebe um parametro passado apos o nome do arquivo a ser rodado por vez queo laço for rodar e soma no total de soma de notas
+    $notas[] = (float) $argv[$contador];
 }
 
 // Exemplo de soma de Notas com While
@@ -30,7 +30,7 @@ for ($contador = 1; $contador < $argc; $contador++) { // O laço For só irá pa
 // $somaDeNotas **= 2;  // Potência
 // $somaDeNotas %= 2; // Resto da Divisão
 
-$notaFilme = $somaDeNotas / $quantidadeDeNotas;
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 
 $planoPrime = true;
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2010;
@@ -57,6 +57,17 @@ $genero = match ($nomeFilme) {
     default => "gênero desconhecido"
 };
 
-echo "O gênero do filme é: $genero";
+echo "O gênero do filme é: $genero\n";
+
+$filme = [
+    "nome" => "Thor: Ragnarok",
+    "ano" => 2021,
+    "nota" => 7.8,
+    "genero" => "super-herói",
+];
+
+echo $filme["nome"];
+
+// var_dump($argv); // Exibe todos os valores de variáveis recebidos como parâmetro ao executar o programa
 
 // echo $argc; // Contem o numero de parametros passados na linha de comando de execucao do programa
