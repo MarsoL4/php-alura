@@ -15,7 +15,7 @@
 
 $dadosConta = [
     "titular" => "Vinícius Dias",
-    "saldo" => 2000
+    "saldo" => 2_000
 ];
 
 echo "********************\nTitular: " . $dadosConta["titular"] . "\nSaldo Atual: " . $dadosConta["saldo"] . "\n********************";
