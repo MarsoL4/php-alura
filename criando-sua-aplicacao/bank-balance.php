@@ -21,7 +21,8 @@ $dadosConta = [
 echo "********************\nTitular: " . $dadosConta["titular"] . "\nSaldo Atual: " . $dadosConta["saldo"] . "\n********************";
 
 $opcao = 0;
-while ($opcao != 4) {
+
+do {
     echo "\n\n1. Consultar saldo atual \n2. Sacar valor \n3. Depositar valor \n4. Sair \n\nDigite a opção desejada: ";
 
     $opcao = (int) fgets(STDIN);
@@ -71,4 +72,4 @@ while ($opcao != 4) {
 
     }
 
-}
+} while ($opcao != 4);
